@@ -31,3 +31,4 @@ C:\Projeto FIAP\Tech\ContactManagement\ContactManagement\Contact.API\obj\Debug\n
 C:\Projeto FIAP\Tech\ContactManagement\ContactManagement\Contact.API\obj\Debug\net8.0\Contact.API.pdb
 C:\Projeto FIAP\Tech\ContactManagement\ContactManagement\Contact.API\obj\Debug\net8.0\Contact.API.genruntimeconfig.cache
 C:\Projeto FIAP\Tech\ContactManagement\ContactManagement\Contact.API\obj\Debug\net8.0\ref\Contact.API.dll
+C:\Projeto FIAP\Tech\ContactManagement\ContactManagement\Contact.API\obj\Debug\net8.0\Contact.API.sourcelink.json
