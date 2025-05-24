@@ -26,4 +26,3 @@ jobs:
 
       - name: Testes
         run: dotnet test ContactManagement/ContactManagement.sln --no-build --verbosity normal
-
