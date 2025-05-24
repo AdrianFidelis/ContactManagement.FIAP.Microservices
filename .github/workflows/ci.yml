@@ -1,28 +1,26 @@
-name: CI
+name: .NET CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v3
+    - name: Checkout do código
+      uses: actions/checkout@v3
 
-      - name: Instalar .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.0.x'
+    - name: Instalar .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
 
-      - name: Restaurar dependências
-        run: dotnet restore ContactManagement/ContactManagement.sln
+    - name: Restaurar dependências
+      run: dotnet restore ContactManagement/ContactManagement/ContactManagement.sln
 
-      - name: Build
-        run: dotnet build ContactManagement/ContactManagement.sln --no-restore
-
-      - name: Testes
-        run: dotnet test ContactManagement/ContactManagement.sln --no-build --verbosity normal
+    - name: Rodar testes (unitários + integração)
+      run: dotnet test ContactManagement/ContactManagement/ContactManagement.sln --no-build --verbosity normal
