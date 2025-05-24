@@ -20,7 +20,8 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restaurar dependências
-      run: dotnet restore ContactManagement/ContactManagement/ContactManagement.sln
+      run: dotnet restore ContactManagement/ContactManagement/ContactManagement/ContactManagement.sln
 
     - name: Rodar testes (unitários + integração)
-      run: dotnet test ContactManagement/ContactManagement/ContactManagement.sln --no-build --verbosity normal
+      run: dotnet test ContactManagement/ContactManagement/ContactManagement/ContactManagement.sln --no-build --verbosity normal
+
