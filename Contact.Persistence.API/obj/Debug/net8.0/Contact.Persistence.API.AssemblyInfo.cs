@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Contact.Persistence.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fe3f547bcd8722d134d78310de0ae84ebc0f99f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Contact.Persistence.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Contact.Persistence.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
