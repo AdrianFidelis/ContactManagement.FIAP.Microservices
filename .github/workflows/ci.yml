@@ -1,4 +1,4 @@
-name: .NET CI
+name: CI Pipeline
 
 on:
   push:
@@ -7,24 +7,23 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Instalar o .NET SDK
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '8.0.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Restaurar dependências
-      run: dotnet restore
+      - name: Restore dependencies
+        run: dotnet restore ContactManagement.sln
 
-    - name: Build
-      run: dotnet build --no-restore
+      - name: Build
+        run: dotnet build ContactManagement.sln --no-restore
 
-    - name: Testar
-      run: dotnet test --no-build --verbosity normal
+      - name: Run Tests
+        run: dotnet test ContactManagement.sln --no-build --verbosity normal
